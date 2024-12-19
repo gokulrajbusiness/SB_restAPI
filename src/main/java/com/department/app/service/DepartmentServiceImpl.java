@@ -38,6 +38,14 @@ public class DepartmentServiceImpl implements DepartmentService{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public List<Department> getDepartmentByLocation(Department department, String location) {
+		// TODO Auto-generated method stub
+		return departmentRepository.findByLocation(location);
+	}
+
+
 	
 
 }

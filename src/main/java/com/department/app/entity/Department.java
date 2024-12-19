@@ -10,72 +10,72 @@ public class Department {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long RequestID;
-	private String CustomerName;
-	private String CustomerDog;
-	private String Problem;
-	private String Location;
-
-
-	public Long getRequestID() {
-		return RequestID;
-	}
-
-	public void setRequestID(Long requestID) {
-		this.RequestID = requestID;
-	}
+	private Long requestID;
+	private String customerName;
+	private String customerDog;
+	private String problem;
+	private String location;
 
 	public String getCustomerName() {
-		return CustomerName;
+		return customerName;
 	}
 
 	public void setCustomerName(String customerName) {
-		this.CustomerName = customerName;
+		this.customerName = customerName;
+	}
+
+	public Long getRequestID() {
+		return requestID;
+	}
+
+	public void setRequestID(Long requestID) {
+		this.requestID = requestID;
 	}
 
 	public String getCustomerDog() {
-		return CustomerDog;
+		return customerDog;
 	}
 
 	public void setCustomerDog(String customerDog) {
-		this.CustomerDog = customerDog;
+		this.customerDog = customerDog;
 	}
 
 	public String getProblem() {
-		return Problem;
+		return problem;
 	}
 
 	public void setProblem(String problem) {
-		this.Problem = problem;
+		this.problem = problem;
 	}
 
 	public String getLocation() {
-		return Location;
+		return location;
 	}
 
 	public void setLocation(String location) {
-		this.Location = location;
+		this.location = location;
 	}
 
-	public Department(Long requestID, String customerName, String customerDog, String problem, String location) {
-		this.RequestID = requestID;
-		this.CustomerName = customerName;
-		this.CustomerDog = customerDog;
-		this.Problem = problem;
-		this.Location = location;
+	public Department(String customerName, Long requestID, String customerDog, String problem, String location) {
+		this.customerName = customerName;
+		this.requestID = requestID;
+		this.customerDog = customerDog;
+		this.problem = problem;
+		this.location = location;
 	}
 
 	public Department() {
 			}
 
+
 	@Override
 	public String toString() {
 		return "Department{" +
-				"RequestID=" + RequestID +
-				", CustomerName='" + CustomerName + '\'' +
-				", CustomerDog='" + CustomerDog + '\'' +
-				", Problem='" + Problem + '\'' +
-				", Location='" + Location + '\'' +
+				"requestID=" + requestID +
+				", customerName='" + customerName + '\'' +
+				", customerDog='" + customerDog + '\'' +
+				", problem='" + problem + '\'' +
+				", location='" + location + '\'' +
 				'}';
 	}
 }
