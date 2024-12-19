@@ -15,4 +15,5 @@ public interface DepartmentService {
 
 	Optional<Department> getDepartmentById(Department department, Long id);
 
+	List<Department> getDepartmentByLocation(Department department, String location);
 }
