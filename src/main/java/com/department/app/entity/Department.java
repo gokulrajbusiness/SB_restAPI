@@ -10,55 +10,72 @@ public class Department {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long depID;
-	private String depName;
-	private String depAdddress;
-	private String DepCode;
-	
-	
-	public Long getDepID() {
-		return depID;
-	}
-	public void setDepID(Long depID) {
-		this.depID = depID;
-	}
-	public String getDepName() {
-		return depName;
-	}
-	public void setDepName(String depName) {
-		this.depName = depName;
-	}
-	public String getDepAdddress() {
-		return depAdddress;
-	}
-	public void setDepAdddress(String depAdddress) {
-		this.depAdddress = depAdddress;
-	}
-	public String getDepCode() {
-		return DepCode;
-	}
-	public void setDepCode(String depCode) {
-		DepCode = depCode;
+	private Long RequestID;
+	private String CustomerName;
+	private String CustomerDog;
+	private String Problem;
+	private String Location;
+
+
+	public Long getRequestID() {
+		return RequestID;
 	}
 
-	
-	public Department(Long depID, String depName, String depAdddress, String depCode) {
-		super();
-		this.depID = depID;
-		this.depName = depName;
-		this.depAdddress = depAdddress;
-		DepCode = depCode;
+	public void setRequestID(Long requestID) {
+		this.RequestID = requestID;
 	}
-	
-	@Override
-	public String toString() {
-		return "Department [depID=" + depID + ", depName=" + depName + ", depAdddress=" + depAdddress + ", DepCode="
-				+ DepCode + "]";
+
+	public String getCustomerName() {
+		return CustomerName;
 	}
+
+	public void setCustomerName(String customerName) {
+		this.CustomerName = customerName;
+	}
+
+	public String getCustomerDog() {
+		return CustomerDog;
+	}
+
+	public void setCustomerDog(String customerDog) {
+		this.CustomerDog = customerDog;
+	}
+
+	public String getProblem() {
+		return Problem;
+	}
+
+	public void setProblem(String problem) {
+		this.Problem = problem;
+	}
+
+	public String getLocation() {
+		return Location;
+	}
+
+	public void setLocation(String location) {
+		this.Location = location;
+	}
+
+	public Department(Long requestID, String customerName, String customerDog, String problem, String location) {
+		this.RequestID = requestID;
+		this.CustomerName = customerName;
+		this.CustomerDog = customerDog;
+		this.Problem = problem;
+		this.Location = location;
+	}
+
 	public Department() {
 			}
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return "Department{" +
+				"RequestID=" + RequestID +
+				", CustomerName='" + CustomerName + '\'' +
+				", CustomerDog='" + CustomerDog + '\'' +
+				", Problem='" + Problem + '\'' +
+				", Location='" + Location + '\'' +
+				'}';
+	}
 }
