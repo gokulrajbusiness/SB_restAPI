@@ -28,22 +28,19 @@ public class DepartmentServiceImpl implements DepartmentService{
 	}
 	
 	@Override
-	public Optional<Department> getDepartmentById(Department department,Long id) {
+	public Optional<Department> getDepartmentById(Long id) {
 		// TODO Auto-generated method stub
 		return departmentRepository.findById(id);
 	}
 
-	@Override
-	public Department getDepartmentById(Department department) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
-	public List<Department> getDepartmentByLocation(Department department, String location) {
+	public List<Department> getDepartmentByLocation(String location) {
 		// TODO Auto-generated method stub
 		return departmentRepository.findByLocation(location);
 	}
+
+
 
 
 }
