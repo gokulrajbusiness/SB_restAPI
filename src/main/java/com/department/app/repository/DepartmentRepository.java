@@ -17,6 +17,5 @@ import java.util.Optional;
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Long>{
 
-
     List<Department> findByLocation(String location);
 }
