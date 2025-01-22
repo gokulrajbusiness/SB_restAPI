@@ -11,14 +11,11 @@ import com.department.app.entity.Department;
 
 import jakarta.persistence.EntityManager;
 
+import java.util.List;
+import java.util.Optional;
+
 @Repository
 public interface DepartmentRepository extends JpaRepository<Department, Long>{
 
-	
-
-	
-
-	
-	
-
+    List<Department> findByLocation(String location);
 }

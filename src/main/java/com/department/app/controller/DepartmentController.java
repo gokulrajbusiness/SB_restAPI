@@ -31,10 +31,16 @@ public class DepartmentController {
 		
 	}
 	
-	@GetMapping("/Department/{id}")
-	public Optional<Department> getDepartmentById(@RequestBody Department department,@PathVariable Long id) {
-		return departmentService.getDepartmentById(department, id);
+	@GetMapping("/Departments/{id}")
+	public Optional<Department> getDepartmentById(@PathVariable Long id) {
+		return departmentService.getDepartmentById( id);
 		
+	}
+
+	@GetMapping("/Department/{loc}")
+	public List<Department> getDepartmentById(@PathVariable String loc) {
+		return departmentService.getDepartmentByLocation(loc);
+
 	}
 	
 
